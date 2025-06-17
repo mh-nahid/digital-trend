@@ -1,0 +1,48 @@
+.studio {
+	background-color: $grey-light;
+
+	&__item {
+		position: relative;
+	}
+
+	&__img {
+		border-radius: .5rem;
+	}
+
+	&__caption {
+		position: absolute;
+		bottom: 3rem;
+		left: 3rem;
+		padding: 2rem;
+		background-color: #ffffff;
+		width: 90%;
+		border-radius: .5rem;
+		&-title {
+			font-family: $bold-font;
+			font-size: 1.5rem;
+			color: $text-grey-light;
+		}
+		&-paragraph {
+			font-size: 2.4rem;
+			color: $primary;
+			&:hover,
+			&:focus {
+				color: $primary-light;
+				text-decoration: none;
+				outline: none;
+			}
+		}
+	}
+	&__icon {
+		font-size: 2rem;
+		float: right;
+		width: 4rem;
+		height: 4rem;
+		border-radius: 50%;
+		background-color: $primary;
+		color: $text-white;
+		text-align: center;
+		display: flex;
+		justify-content: center;align-items: center;
+	}
+}

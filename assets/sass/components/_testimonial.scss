@@ -1,0 +1,30 @@
+.testimonial {
+	&__img {
+		width: 100%;
+		text-align: center;
+	}
+	&__title {
+		text-transform: uppercase;
+		font-size: 2rem;
+		letter-spacing: .3rem;
+	}
+
+	&__blquote {
+		position: relative;
+		color: $grey;
+		font-size: 2.6rem;
+		letter-spacing: 2;
+		z-index: 2;
+
+		&::before {
+			z-index: -2;
+			position: absolute;
+			content: "\201C";
+			font-family: serif;
+			top: -10rem;
+			left: 0;
+			color: #F4F4F4;
+			font-size: 25rem;
+		}
+	}
+}

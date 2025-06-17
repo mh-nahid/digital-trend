@@ -1,0 +1,43 @@
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/base";
+@import "base/animations";
+@import "base/utilities";
+
+@import "components/hero";
+@import "components/button";
+@import "components/studio";
+@import "components/testimonial";
+@import "components/blog";
+@import "components/sidebar";
+@import "components/form";
+@import "components/projects-file";
+
+@import "layout/footer";
+@import "layout/navigation";
+@import "layout/breadcrumbs";
+
+@font-face {
+      font-family: 'Plain-Regular';
+      src: url('../fonts/Plain-Regular.woff2') format('woff2'),
+          url('../fonts/Plain-Regular.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+  }
+
+  @font-face {
+      font-family: 'Plain-Light';
+      src: url('../fonts/Plain-Light.woff2') format('woff2'),
+          url('../fonts/Plain-Light.woff') format('woff');
+      font-weight: bold;
+      font-style: normal;
+  }
+
+  @font-face {
+      font-family: 'Plain-Bold';
+      src: url('../fonts/Plain-Bold.woff2') format('woff2'),
+          url('../fonts/Plain-Bold.woff') format('woff');
+      font-weight: bold;
+      font-style: normal;
+  }

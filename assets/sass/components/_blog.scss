@@ -1,0 +1,49 @@
+.blog {
+	padding-bottom: 7rem;
+	&__content {
+		position: relative;
+		&-img {
+			width: 100%;
+			border-radius: .5rem; 
+		}
+		&-excerpt {
+			position: absolute;
+			bottom: 2rem;
+			left: 3rem;
+			padding: 2rem;
+			background-color: #ffffff;
+			width: 90%;
+			border-radius: .5rem;
+			@include respond (tab-land) {
+					padding: 1rem;
+				}
+				@include respond (phone-sm) {
+					position: inherit;
+					bottom: 0;
+					left: 0;
+					padding: 0;
+					margin: 1rem 0;
+				}
+			&--title {
+				color: $primary;
+			}
+			&--link {
+				color: $text-grey-light;
+				font-size: 2rem;
+				transition: .2s all;
+				@include respond (tab-land) {
+					font-size: 1.5rem;
+				}
+				&:hover {
+					color: $text-yellow;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+	&__sidebar {
+		@include respond (767) {
+			padding-top: 5rem;
+		}
+	}
+}

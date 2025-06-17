@@ -1,0 +1,72 @@
+.footer {
+	padding-top: 10rem;
+	font-size: 1.8rem;
+	background-color: $grey;
+	@include respond (tab-port) {
+		padding-bottom: 5rem;
+	}
+
+	&__text {
+		font-size: 3rem;
+		font-family: $bold-font;
+		color: $text-white;
+		line-height: 1.8;
+	}
+	&__info,
+	&__menus,
+	&__icon {
+		&-list {
+			list-style: none;
+			a {
+				color: $text-grey-light;
+				transition: .2s all;
+				&:hover {
+					text-decoration: none;
+					color: $text-yellow;
+				}
+			}
+		}
+	}
+	&__studio {
+		.paragraph {
+			line-height: 1.8;
+		}
+	}
+	&__copyright {
+		// @include respond (tab-land) {
+		// 	margin-bottom: 5rem;
+		// }
+		a {
+			&:hover{
+				color: $text-grey-light;
+				text-decoration: none;
+			}
+		}
+	}
+	&__info,
+	&__studio {
+		.yellow {
+			margin-right: 2rem;
+		}
+		&-title {
+			font-size: 2rem;
+			letter-spacing: .4px;
+			margin-bottom: 2.5rem;
+			text-transform: uppercase;
+		}
+	}
+	&__menus,
+	&__icon {
+		&-wrapper {
+			padding: 0 2rem;
+			display: flex;
+			justify-content: center;
+		}
+		&-list {
+			&:not(:first-child) {
+				margin-left: 2rem;
+			}
+		}
+	}
+	
+}

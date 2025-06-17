@@ -1,0 +1,111 @@
+.navbar {
+	// min-height: 10rem; because of logo displacement in navbar-toggler
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+	z-index: 3;
+	background-color: $primary-light;
+	&-brand {
+			font-size: 3.2rem;
+			color: $text-white;
+			transition: .2s all;
+		&:hover {
+			color: $text-yellow;
+		}
+		i {
+			margin-right: 1rem;
+		}
+	}
+	&-nav {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+			.nav-item {
+				&:not(:first-child) {
+					margin-left: 3.5rem;
+					@media only screen and (max-width: 991px) {
+						margin-left: 0;
+					}
+				}
+				.nav-link {
+					color: $text-white;
+					font-size: 1.5rem;
+					text-transform: capitalize;
+					transition: .2s all;
+					@media only screen and (max-width: 991px) {
+						margin-top: 3rem;
+					}
+					&:hover,
+					&:active {
+						color: $text-yellow;
+					}
+					&.contact {
+						padding: 1rem 2.5rem;
+						font-family: $bold-font;
+						border: 2px solid $text-yellow;
+						border-radius: 100px;
+						&:hover,
+						&:active {
+							color: $text-white;
+							background-color: $text-yellow;
+						}
+					}
+				}
+			}
+		}
+		&-toggler-icon {
+			background: none;
+			background: $text-white;
+		    transition: background 10ms 300ms ease;
+		    display: block;
+		    width: 30px;
+		    height: 2px;
+		    position: relative;
+		    &::before,
+		    &::after {
+		    	transition: top 300ms 350ms ease, -webkit-transform 300ms 50ms ease;
+			    transition: top 300ms 350ms ease, transform 300ms 50ms ease;
+			    transition: top 300ms 350ms ease, transform 300ms 50ms ease, -webkit-transform 300ms 50ms ease;
+			    position: absolute;
+			    right: 0;
+			    left: 0;
+			    background: $text-white;
+			    width: 30px;
+			    height: 2px;
+			    content: '';
+		    }
+		    &::before {
+		    	top: -8px;
+		    }
+		    &::after {
+		    	top: 8px;
+		    }
+		}
+		&-toggler {
+			border: 0;
+			padding: 0;
+			cursor: pointer;
+			margin: 0 1rem 0 0;
+			width: 3rem;
+			height: 3.5rem;
+			outline: none;
+			&:focus {
+				outline: none;
+			}
+		}
+}
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+	 background: transparent;
+	&::before,
+	&::after {
+		transition: top 300ms 50ms ease, -webkit-transform 300ms 350ms ease;
+    	transition: top 300ms 50ms ease, transform 300ms 350ms ease;
+  		transition: top 300ms 50ms ease, transform 300ms 350ms ease, -webkit-transform 300ms 350ms ease;
+   		 top: 0;
+	}
+	&::before {
+		transform: rotate(45deg);
+	}
+	&::after {
+		transform: rotate(-45deg);
+	}
+}

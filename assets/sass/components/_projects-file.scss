@@ -1,0 +1,14 @@
+.projects {
+	padding-top: 0;
+	&__para {
+		hyphens: auto;
+	}
+	&__title {
+		color: $primary;
+		font-family: $bold-font;
+	}
+	&__order {
+		list-style-type: square;
+		margin-left: 1.8rem;
+	}
+}

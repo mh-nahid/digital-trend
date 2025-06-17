@@ -1,0 +1,27 @@
+.owl-carousel{
+  position: relative;
+
+    .owl-dots {
+        bottom: -7rem;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%,-50%);
+        
+        button {
+            background-color: $text-grey-light !important;
+            width: 5rem;
+            height: .3rem;
+            margin-left: .5rem;
+            @include respond (phone) {
+                width: 3rem;
+            }
+            &:focus {
+                outline: none;
+            }
+        }
+        & .active {
+            outline:none;
+            background-color: $text-yellow !important;
+        }
+    }
+}
